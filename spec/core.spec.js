@@ -1,19 +1,21 @@
-const { teachers, fourthTeacher, lastTeacher, firstTeacher } = require('../src/core.js')
+const { person, mainInstrument, bestFriend } = require('../src/core.js')
 
-describe("Fundamental Arrays", () => {
-    it("fourth teacher should be Phil", () => {
-        expect(fourthTeacher).toEqual('Phil')
+describe("Fundamental Objects", () => {
+    it("person", () => {
+        expect(person).toEqual({
+            age: 43,
+            name: 'Matt',
+            instruments: [ 'Guitar', 'Piano', 'Vocals' ],
+            profession: { name: 'Musician' },
+            friends: [ { name: 'Chris', age: 46 }, { name: 'Dom', age: 43 } ]
+        })
     })
 
-    it("last teacher should be Shahzad", () => {
-        expect(lastTeacher).toEqual('Shahzad')
+    it("mainInstrument", () => {
+        expect(mainInstrument).toEqual('Vocals')
     })
 
-    it("first teacher should be Nathan", () => {
-        expect(firstTeacher).toEqual('Nathan')
-    })
-
-    it("final teachers array", () => {
-        expect(teachers).toEqual([ 'Sarah', 'Steve', 'Phil', 'Patrick', 'Lewis', 'Vanessa' ])
+    it("bestFriend", () => {
+        expect(bestFriend).toEqual('Chris')
     })
 })
