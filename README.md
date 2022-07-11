@@ -1,4 +1,13 @@
-# Programming Fundamentals: Objects
+# Programming Fundamentals: Functions 2
+
+## Learning Objectives
+
+- Explain that functions are self-contained pieces of code that can be reused across a codebase
+- Explain that functions can have inputs and produce an output
+
+## Introduction
+
+In this exercise, you're going to create some functions to help Phil keep track of his progress as he bakes a cake for your cohort.
 
 ## Setup
 
@@ -25,7 +34,12 @@ console.log(hello)
 
 ## Running tests
 
-- When ready to test your solution is correct, run the test suite with the command `npm test`
+- To verify your solutions, run the test suite by running the `npx jasmine` command followed by the path to the test file `spec/core.spec.js`:
+
+`npx jasmine spec/core.spec.js`
+
+- Alternatively, run `npm test`
+
 - To begin with, all of the tests will fail. You'll see red `F`'s in your console, like the image below:
 
 ![](./img/test-fail.png)
@@ -33,8 +47,3 @@ console.log(hello)
 - Your solution is complete when the red `F`'s have been replaced with green `.`'s in your console, like the image below:
 
 ![](./img/test-success.png)
-
-## Extension
-
-- If you finish the core criteria, you can follow the same development process for the `src/extension.js` file
-- To run the extension tests, use the command `npm run test-extension`

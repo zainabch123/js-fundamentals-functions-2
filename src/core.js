@@ -1,48 +1,37 @@
-// Don't change the person variable directly on line 2
-const person = { age: 32, size: 'Small' }
-
-// 1. Give the person object a name property with the value Matt
+// 1. Create a function named bakingTime that returns 50
 
 
-// 2. Remove the size property from the person
+
+// 2. Create a function named remainingBakeTime that accepts one parameter:
+// - the number of minutes your cake has been in the oven.
+//
+// It must return how many minutes your cake has left based on your parameter
+// and the result of the bakingTime function
 
 
-// 3. Increase the person's age by 11
+
+// 3. Create a function named calculatePreparationTime that accepts one parameter:
+// - the number of layers your cake has
+//
+// It must return how many minutes it will take to prepare your cake, based on
+// each layer taking 3 minutes to prepare
 
 
-// 4. Add an instruments property to the person, initialised as an empty array
+
+// 4. Create a function named totalTimeSpent that accepts two parameters:
+// - the number of layers your cake has
+// - the number of minutes the cake has already been baking in the oven
+// It must return how many minutes in total you have spent making the cake,
+// which is the sum of the preparation time and the number of minutes it's been in the oven.
+// Use your calculatePreparationTime function in the calculation.
 
 
-// 5. Add the following instruments to the persons instruments array: Guitar, Piano, Vocals
-
-
-// 6. Using an index on the instruments array, set the mainInstrument variable below
-// to the third instrument in the array
-const mainInstrument = undefined
-
-
-// 7. Add a profession property to the person, which is an object
-
-
-// 8. Add a name property to the profession object with the value Musician
-
-
-// 9. Add a friends property to the person, which is an empty array
-
-
-// 10. Add two objects to the persons friends array with the following properties:
-// Friend one: name - Chris, age - 46
-// Friend two: name - Dom, age - 43
-
-
-// 11. Using an index on the persons friends array, set the bestFriend variable below
-// to the name of the first friend in the array
-const bestFriend = undefined
 
 
 // Don't change the code below this line
 module.exports = {
-    person,
-    mainInstrument,
-    bestFriend
+    bakingTime,
+    remainingBakeTime,
+    calculatePreparationTime,
+    totalTimeSpent
 }
