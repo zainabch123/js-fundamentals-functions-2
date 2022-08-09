@@ -14,7 +14,7 @@ In this exercise, you're going to create some functions to help Phil keep track 
 - Fork this repository and clone your forked version to your machine
 - Install dependencies by running the command below while in the project's root directory:
 
-`npm ci`
+    `npm ci`
 
 ## Instructions
 
@@ -36,14 +36,16 @@ console.log(hello)
 
 - To verify your solutions, run the test suite by running the `npx jasmine` command followed by the path to the test file `spec/core.spec.js`:
 
-`npx jasmine spec/core.spec.js`
+    `npx jasmine spec/core.spec.js`
 
-- Alternatively, run `npm test`
+- Alternatively, run:
 
-- To begin with, all of the tests will fail. You'll see red `F`'s in your console, like the image below:
+    `npm test`
+
+- To begin with, all of the tests will fail. You'll see red `F`s in your console, like the image below:
 
 ![](./img/test-fail.png)
 
-- Your solution is complete when the red `F`'s have been replaced with green `.`'s in your console, like the image below:
+- Your solution is complete when the red `F`s have been replaced with green `.`s in your console, like the image below:
 
 ![](./img/test-success.png)
