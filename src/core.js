@@ -21,12 +21,8 @@
 
 // Don't change the code below this line
 module.exports = {
-  /* eslint-disable no-undef */
-  bakingTime,
-  /* eslint-disable no-undef */
-  remainingBakeTime,
-  /* eslint-disable no-undef */
-  calculatePreparationTime,
-  /* eslint-disable no-undef */
-  totalTimeSpent
+  bakingTime /* eslint-disable-line no-undef */,
+  remainingBakeTime /* eslint-disable-line no-undef */,
+  calculatePreparationTime /* eslint-disable-line no-undef */,
+  totalTimeSpent /* eslint-disable-line no-undef */
 }
