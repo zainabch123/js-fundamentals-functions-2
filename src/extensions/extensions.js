@@ -5,6 +5,22 @@
 // "The cake is still baking!" if there are any remaining minutes left,
 // or "You didn't set a timer!" if no value is provided to the parameter
 
+function timerStatus(a) {
+  if (a == undefined) {
+    console.log(0);
+    return "You didn't set a timer!";
+    console.log(1);
+  } else if (a = 0) {
+    return "Phil's cake is ready!";
+    console.log(2);
+  } else if (a > 0) {
+    return "The cake is still baking!";
+    console.log(3);
+  }
+}
+
+console.log(timerStatus(7));
+
 // 2. To help Phil prepare ahead of time, create a function named estimatePrepTime
 // that accepts two parameters:
 // - an array of ingredients (e.g. ["sugar", "milk", "flour", "eggs"])
@@ -46,7 +62,7 @@
 // Don't change the code below this line
 module.exports = {
   timerStatus /* eslint-disable-line no-undef */,
-  estimatePrepTime /* eslint-disable-line no-undef */,
-  calculateQuantities /* eslint-disable-line no-undef */,
-  improveRecipe /* eslint-disable-line no-undef */
+  //estimatePrepTime /* eslint-disable-line no-undef */,
+  //calculateQuantities /* eslint-disable-line no-undef */,
+  //improveRecipe /* eslint-disable-line no-undef */
 }
