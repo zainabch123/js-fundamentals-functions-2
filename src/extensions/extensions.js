@@ -7,14 +7,14 @@
 
 function timerStatus(mins) {
   if (mins === 0) {
-    return "Phil's cake is ready!";
+    return "Phil's cake is ready!"
   } else if (mins > 0) {
-    return "The cake is still baking!";
+    return 'The cake is still baking!'
   } else if (mins === undefined) {
-    return "You didn't set a timer!";
+    return "You didn't set a timer!"
   }
 }
-console.log(timerStatus());
+console.log(timerStatus())
 
 // 2. To help Phil prepare ahead of time, create a function named estimatePrepTime
 // that accepts two parameters:
@@ -30,16 +30,15 @@ function estimatePrepTime(arr, num) {
   if (num === undefined) {
     num = 2
   } else if (num > 0) {
-    num = num
+    num = num + 0
   }
-  for (let i = 0; i<arr.length; i++) {
-    prepTime += (1* num);
+  for (let i = 0; i < arr.length; i++) {
+    prepTime += 1 * num
   }
-  return prepTime;
+  return prepTime
 }
-const array1 = ["milk", "sugar", "flour", "eggs", "soda"];
-console.log(estimatePrepTime(array1, 3));
-
+const array1 = ['milk', 'sugar', 'flour', 'eggs', 'soda']
+console.log(estimatePrepTime(array1, 3))
 
 // 3. Phil needs to know the quantity of milk and eggs to use! Create a function
 // named calculateQuantities which accepts two parameters:
@@ -60,22 +59,21 @@ console.log(estimatePrepTime(array1, 3));
 function calculateQuantities(arr, num) {
   let result = {
     sugar: 0,
-    eggs: 0,
+    eggs: 0
   }
-if (arr.includes('sugar')) {
-  result.sugar = 100*num;
-  
-} 
-if (arr.includes('eggs')) {
-  result.eggs = 2*num;
-} else {
-  result = result;
-}
+  if (arr.includes('sugar')) {
+    result.sugar = 100 * num
+  }
+  if (arr.includes('eggs')) {
+    result.eggs = 2 * num
+  } else {
+    result = result + 0
+  }
 
-return result;
+  return result
 }
-array2 = ["milk", "eggs"]
-console.log(calculateQuantities(array2, 2));
+const array2 = ['milk', 'eggs']
+console.log(calculateQuantities(array2, 2))
 
 // 4. Phil's cake is pretty small and only provides 1 portion. He wants to make a bigger one!
 // Create a function named improveRecipe that accepts two parameters:
@@ -91,24 +89,24 @@ console.log(calculateQuantities(array2, 2));
 // returns: { eggs: 6, milk: 300, sugar: 600 }
 
 function improveRecipe(object, num3) {
-  let result2 = {}
+  const result2 = {}
   if (Object.keys(object).includes('eggs') === true) {
-    result2.eggs = object.eggs*num3;
-  } 
+    result2.eggs = object.eggs * num3
+  }
   if (Object.keys(object).includes('milk') === true) {
     result2.milk = object.milk * num3
-  } 
+  }
   if (Object.keys(object).includes('flour') === true) {
     result2.flour = object.flour * num3
   }
   if (Object.keys(object).includes('sugar') === true) {
     result2.sugar = object.sugar * num3
-  return result2;
-}
+    return result2
+  }
 }
 
-obj1 = {eggs: 2, milk: 100, sugar: 200};
-console.log(improveRecipe(obj1, 3));
+const obj1 = { eggs: 2, milk: 100, sugar: 200 }
+console.log(improveRecipe(obj1, 3))
 
 // Don't change the code below this line
 module.exports = {
