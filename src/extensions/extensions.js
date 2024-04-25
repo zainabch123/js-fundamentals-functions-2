@@ -5,6 +5,17 @@
 // "The cake is still baking!" if there are any remaining minutes left,
 // or "You didn't set a timer!" if no value is provided to the parameter
 
+function timerStatus(mins) {
+  if (mins === 0) {
+    return "Phil's cake is ready!";
+  } else if (mins > 0) {
+    return "The cake is still baking!";
+  } else if (mins === undefined) {
+    return "You didn't set a timer!";
+  }
+}
+console.log(timerStatus());
+
 // 2. To help Phil prepare ahead of time, create a function named estimatePrepTime
 // that accepts two parameters:
 // - an array of ingredients (e.g. ["sugar", "milk", "flour", "eggs"])
@@ -13,6 +24,22 @@
 // number of ingredients provided and the prep time per ingredient.
 // If no prep time per ingredient is provided, the function should assume each ingredient
 // takes 2 minutes to prepare
+
+function estimatePrepTime(arr, num) {
+  let prepTime = 0
+  if (num === undefined) {
+    num = 2
+  } else if (num > 0) {
+    num = num
+  }
+  for (let i = 0; i<arr.length; i++) {
+    prepTime += (1* num);
+  }
+  return prepTime;
+}
+const array1 = ["milk", "sugar", "flour", "eggs", "soda"];
+console.log(estimatePrepTime(array1, 3));
+
 
 // 3. Phil needs to know the quantity of milk and eggs to use! Create a function
 // named calculateQuantities which accepts two parameters:
@@ -30,6 +57,26 @@
 // calculateQuantities(["milk", "eggs"], 3)
 // returns: { sugar: 0, eggs: 6 }
 
+function calculateQuantities(arr, num) {
+  let result = {
+    sugar: 0,
+    eggs: 0,
+  }
+if (arr.includes('sugar')) {
+  result.sugar = 100*num;
+  
+} 
+if (arr.includes('eggs')) {
+  result.eggs = 2*num;
+} else {
+  result = result;
+}
+
+return result;
+}
+array2 = ["milk", "eggs"]
+console.log(calculateQuantities(array2, 2));
+
 // 4. Phil's cake is pretty small and only provides 1 portion. He wants to make a bigger one!
 // Create a function named improveRecipe that accepts two parameters:
 // - an object where the keys are ingredients and the values are quantities
@@ -43,10 +90,30 @@
 // improveRecipe({ eggs: 2, milk: 100, sugar: 200 }, 3)
 // returns: { eggs: 6, milk: 300, sugar: 600 }
 
+function improveRecipe(object, num3) {
+  let result2 = {}
+  if (Object.keys(object).includes('eggs') === true) {
+    result2.eggs = object.eggs*num3;
+  } 
+  if (Object.keys(object).includes('milk') === true) {
+    result2.milk = object.milk * num3
+  } 
+  if (Object.keys(object).includes('flour') === true) {
+    result2.flour = object.flour * num3
+  }
+  if (Object.keys(object).includes('sugar') === true) {
+    result2.sugar = object.sugar * num3
+  return result2;
+}
+}
+
+obj1 = {eggs: 2, milk: 100, sugar: 200};
+console.log(improveRecipe(obj1, 3));
+
 // Don't change the code below this line
 module.exports = {
-  timerStatus /* eslint-disable-line no-undef */
-  // estimatePrepTime /* eslint-disable-line no-undef */,
-  // calculateQuantities /* eslint-disable-line no-undef */,
-  // improveRecipe /* eslint-disable-line no-undef */
+  timerStatus /* eslint-disable-line no-undef */,
+  estimatePrepTime /* eslint-disable-line no-undef */,
+  calculateQuantities /* eslint-disable-line no-undef */,
+  improveRecipe /* eslint-disable-line no-undef */
 }
