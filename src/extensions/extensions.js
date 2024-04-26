@@ -57,7 +57,7 @@ console.log(estimatePrepTime(array1, 3))
 // returns: { sugar: 0, eggs: 6 }
 
 function calculateQuantities(arr, num) {
-  let result = {
+  const result = {
     sugar: 0,
     eggs: 0
   }
