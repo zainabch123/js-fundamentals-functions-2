@@ -66,13 +66,11 @@ function calculateQuantities(arr, num) {
   }
   if (arr.includes('eggs')) {
     result.eggs = 2 * num
-  } else {
-    result = result + 0
   }
 
   return result
 }
-const array2 = ['milk', 'eggs']
+const array2 = ['sugar']
 console.log(calculateQuantities(array2, 2))
 
 // 4. Phil's cake is pretty small and only provides 1 portion. He wants to make a bigger one!
